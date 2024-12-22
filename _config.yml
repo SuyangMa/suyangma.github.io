@@ -10,7 +10,7 @@
 locale                   : "中国-徐州"
 title                    : "马苏洋/ SuyangMa"
 title_separator          : "-"
-name                     : &name "666666" # &name "Your Name"
+name                     : &name "马苏洋" # &name "Your Name"
 description              : &description "personal description"
 url                      : https://suyangma.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
