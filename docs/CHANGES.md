@@ -96,3 +96,11 @@
 - External HTTP(S) destinations use target=_blank and rel=noopener noreferrer. Same-origin URLs, language switches, section anchors, email and other non-web schemes retain their navigation behavior.
 - Uses native links and works without JavaScript; Weave remains unlinked until formal publication.
 - Previous production commit: 33cacdb549874a97ff3056a02f536df30bbb1749.
+
+## 2026-11-22: Search descriptions and crawl eligibility
+
+- Applied the owner's exact English and Chinese Meta Description text; Open Graph and Twitter descriptions share the same values.
+- Verified the active Astro template already outputs the tags. Disabled the old preview noindex/nofollow flag so search indexing is allowed as requested.
+- Added the public IndexNow ownership file for submitting the two updated public page URLs after deployment.
+- Preserved the shared page title, localized visible biography, existing paper restrictions and all other body content.
+- Source verification and indexing notes: docs/SEO.md. Previous production commit: 59c5d210d0ea41725cbc96bd95bec1e5c246b65a.

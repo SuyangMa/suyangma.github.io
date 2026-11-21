@@ -57,7 +57,7 @@ const ui = {
     "htmlLang": "zh-CN",
     "path": "/zh-cn/",
     "homeTitle": "个人主页",
-    "description": "马苏洋，华中科技大学博士研究生。个人学术主页预览版，其余信息正在整理中。",
+    "description": "马苏洋（Suyang Ma），华中科技大学博士研究生，师从张宇教授，研究方向为大语言模型智能体（LLM Agents）的高性能系统。",
     "navigation": "主导航",
     "switchLabel": "English",
     "switchAria": "Switch to English",
