@@ -18,21 +18,24 @@ const navLabels: Record<string, string> = ui.nav;
         ))}
       </ul>
     </nav>
-    <a class="language-switch" href={ui.switchPath} lang={ui.switchLang}
-      hreflang={ui.switchLang} aria-label={ui.switchAria} data-language-switch>
-      {ui.switchLabel}
-    </a>
+    <nav class="language-switcher" aria-label={locale === "en" ? "Language" : "语言"}>
+      <a class="language-option" href="/" lang="en" hreflang="en"
+        aria-current={locale === "en" ? "page" : undefined} data-language-switch>English</a>
+      <a class="language-option" href="/zh-cn/" lang="zh-CN" hreflang="zh-CN"
+        aria-current={locale === "zh-cn" ? "page" : undefined} data-language-switch>中文</a>
+    </nav>
   </div>
 </header>
 
 <script>
   // Language pages share section IDs; retain the current section when switching.
-  const languageSwitch = document.querySelector<HTMLAnchorElement>("[data-language-switch]");
+  const languageLinks = document.querySelectorAll<HTMLAnchorElement>("[data-language-switch]");
   function updateLanguageLink() {
-    if (!languageSwitch) return;
-    const target = new URL(languageSwitch.href);
-    target.hash = window.location.hash;
-    languageSwitch.href = target.href;
+    languageLinks.forEach((link) => {
+      const target = new URL(link.href);
+      target.hash = window.location.hash;
+      link.href = target.href;
+    });
   }
   updateLanguageLink();
   window.addEventListener("hashchange", updateLanguageLink);

@@ -2,7 +2,7 @@
 
 - The root URL `/` always serves English. No browser-language redirect, preference cookie or localStorage is used.
 - `/zh-cn/` serves Simplified Chinese; both routes are generated as static HTML and switching uses ordinary links.
-- The header language link switches between the two routes. A small enhancement preserves the current section hash when JavaScript is enabled.
+- The header has an outlined English / Chinese button group. Both languages remain visible; the current language has a dark selected state. The links switch between the two routes. A small enhancement preserves the current section hash when JavaScript is enabled.
 - Both routes use src/components/HomePage.astro, keeping section order, layout, image framing and visibility settings in sync.
 - Interface text and language metadata live in src/i18n.ts. English profile strings still use src/config.ts.
 - English content remains in src/data/. Chinese content uses matching files in src/data/zh-cn/. Keep factual changes and new records synchronized in both directories; never translate placeholder records into actual achievements.

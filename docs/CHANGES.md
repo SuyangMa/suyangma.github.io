@@ -39,3 +39,10 @@
 - Shared the page component between languages; existing portrait framing and favicon assets are unchanged.
 - Added reciprocal alternate-language links and language-specific document metadata.
 - Maintenance instructions: docs/BILINGUAL.md. Previous production commit: b8ec22a2aef7a2471bd5592c6f4eba234b061dcc.
+
+## 2026-11-21: Visible language buttons
+
+- Replaced the subtle single language link with an outlined English / Chinese button group, with both languages visible and the current language highlighted.
+- Preserved native links, keyboard focus styling and section hashes on both options.
+- Allowed the header to wrap naturally so controls remain visible on narrow screens.
+- Previous production commit: 8d9d8f80b6a0fd48b6fc0445154757fa3921564e.
