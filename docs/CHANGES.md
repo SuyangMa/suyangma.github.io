@@ -52,3 +52,8 @@
 - Replaced the introductory paragraphs in both languages with the owner's approved biography: doctoral student at HUST advised by Professor Yu Zhang, B.Eng. from CUMT, and research interests in high-performance systems for LLM agents.
 - Removed the Preview notice from the introduction. Other placeholder records and the existing indexing setting are unchanged.
 - Previous production commit: fdb3d259e325a9d721e9f58f1c78f2d07a343994. Revert this biography commit to restore it.
+
+## 2026-11-21: Emphasize research interests
+
+- Bolded the research-interest phrase in both English and Chinese biographies, preserving the approved wording.
+- Previous production commit: 7ce4b103c3555c1331ce3f589f6d864e779d1208.
