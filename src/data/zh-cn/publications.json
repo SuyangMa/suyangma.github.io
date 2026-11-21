@@ -1,12 +1,17 @@
 {
   "sections": [
     {
-      "heading": "代表论文",
+      "heading": "2026",
       "papers": [
         {
-          "title": "论文信息将在此补充。",
-          "venue": "待补充",
-          "authors": "确认后将补充论文标题、作者、发表会议或期刊以及论文链接。"
+          "title": "面向长文本推理的基于图的Transformer架构",
+          "venue": "[SSI]",
+          "authors": "**马苏洋**、彭彬、张宇、沈鑫宇、吴永迪、王梓骁",
+          "link": "https://doi.org/10.1360/SSI-2026-0127",
+          "journal": "中国科学：信息科学",
+          "year": 2026,
+          "doi": "10.1360/SSI-2026-0127",
+          "acceptedDate": "2026-09-09"
         }
       ]
     }

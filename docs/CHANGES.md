@@ -57,3 +57,12 @@
 
 - Bolded the research-interest phrase in both English and Chinese biographies, preserving the approved wording.
 - Previous production commit: 7ce4b103c3555c1331ce3f589f6d864e779d1208.
+
+## 2026-11-22: First publication and acceptance News
+
+- Replaced publication placeholders with the verified SSI paper (DOI 10.1360/SSI-2026-0127) in both languages.
+- Added the owner-corrected, publisher-verified 2026.09.09 acceptance News with a linked paper title.
+- Added optional publication journal/year and language-note rendering, and day-aware News sorting.
+- Highlighted the owner's name and retained full author order. Journal name is bold italic on its own line; unknown volume/issue/pages remain omitted.
+- Metadata evidence and maintenance notes: docs/PUBLICATIONS.md.
+- Previous production commit: 97f4817c28846f1d6a3e415bf71d56e2cc0a1aa8.

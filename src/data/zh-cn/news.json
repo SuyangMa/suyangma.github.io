@@ -1,7 +1,9 @@
 [
   {
-    "date": "2026.11",
-    "text": "个人学术主页正在建设中。",
-    "detail": "个人信息与学术经历将在确认后补充。"
+    "date": "2026.09.09",
+    "text": "🎉🎉 我们的论文《",
+    "link": "https://doi.org/10.1360/SSI-2026-0127",
+    "linkText": "面向长文本推理的基于图的Transformer架构",
+    "suffix": "》被《中国科学：信息科学》（SCIENTIA SINICA Informationis）接收！"
   }
 ]

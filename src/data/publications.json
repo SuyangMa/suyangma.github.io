@@ -1,12 +1,18 @@
 {
   "sections": [
     {
-      "heading": "Selected Publications",
+      "heading": "2026",
       "papers": [
         {
-          "title": "Publications will be added here.",
-          "venue": "To add",
-          "authors": "Confirmed titles, authors, venues, and paper links will replace this placeholder."
+          "title": "Graph-Based Transformer Architecture for Long Text Reasoning",
+          "venue": "[SSI]",
+          "authors": "**Suyang Ma**, Bin Peng, Yu Zhang, Xinyu Shen, Yongdi Wu, Zixiao Wang",
+          "link": "https://doi.org/10.1360/SSI-2026-0127",
+          "journal": "SCIENTIA SINICA Informationis",
+          "year": 2026,
+          "doi": "10.1360/SSI-2026-0127",
+          "acceptedDate": "2026-09-09",
+          "note": "(in Chinese)"
         }
       ]
     }

@@ -28,8 +28,8 @@ const scholarUrl = (paperId: string) =>
 const introParagraphs = introRaw.trim().split(/\n\n+/);
 
 const ymToDate = (ym: string) => {
-  const [y, m] = ym.split(".");
-  return new Date(Number(y), Number(m || 1) - 1, 1).getTime();
+  const [y, m, d] = ym.split(".");
+  return new Date(Number(y), Number(m || 1) - 1, Number(d || 1)).getTime();
 };
 
 type NewsItem = {
@@ -52,6 +52,9 @@ type Paper = {
   /** Direct link (e.g. arXiv); takes precedence over the Scholar link. */
   link?: string;
   authors: string;
+  journal?: string;
+  year?: number;
+  note?: string;
 };
 type PubSection = { heading: string; papers: Paper[] };
 const pubSections = (publications.sections as PubSection[]);
@@ -81,7 +84,7 @@ const pubSections = (publications.sections as PubSection[]);
                 <div class="row-title">
                   {item.text}
                   {item.link && <a href={item.link}>{item.linkText ?? item.link}</a>}
-                  {item.suffix && <> {item.suffix}</>}
+                  {item.suffix && <>{item.suffix}</>}
                 </div>
                 {item.detail && <div class="row-sub">{item.detail}</div>}
               </div>
@@ -128,11 +131,17 @@ const pubSections = (publications.sections as PubSection[]);
                     ) : (
                       paper.title
                     )}
+                    {paper.note && <span class="publication-note"> {paper.note}</span>}
                   </div>
                   <div class="row-sub">
                     {paper.paperId && <CitationCount paperId={paper.paperId} locale={locale} />}
                     <span set:html={mdInline(paper.authors)} />
                   </div>
+                  {paper.journal && (
+                    <div class="row-sub publication-journal">
+                      <strong><em>{paper.journal}</em></strong>{paper.year && <>, {paper.year}</>}
+                    </div>
+                  )}
                 </div>
               </div>
               );
