@@ -38,7 +38,6 @@ export const navigation = {
   header: [
     { label: "About", href: "/#about" },
     { label: "News", href: "/#news" },
-    { label: "Experience", href: "/#experience" },
     { label: "Publications", href: "/#publications" },
     { label: "Honors", href: "/#honors" },
   ],
@@ -52,7 +51,7 @@ export const homePage = {
   sections: {
     aboutMe: true,
     news: true,
-    experience: true,
+    experience: false,
     publications: true,
     education: true,
     projects: false,
