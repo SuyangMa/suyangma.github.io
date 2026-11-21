@@ -23,3 +23,10 @@
 - Updated the homepage subtitle and author bio to the owner-confirmed "Ph.D. Student @ HUST".
 - Updated the page description to use the same identity.
 - Previous production state: 1e2aa804663af436788b2c0a1e24e59677d7f12e. Revert this identity commit to restore it.
+
+## 2026-11-21: Portrait site icons
+
+- Replaced template favicons and mobile home-screen icons with the owner's existing homepage portrait, preserving its square framing and rounded corners.
+- Added a root favicon.ico fallback and versioned icon URLs to refresh cached template icons.
+- scripts/generate-favicons.mjs reproduces all icon sizes from the unchanged sanitized portrait source using the existing Sharp dependency.
+- Previous production state: b32a0720eb5ddf378a044d9cccb47a1cf92fda95. Revert this icon commit to restore it.
