@@ -1,5 +1,6 @@
 ---
 import { author, homePage } from "../config";
+import { Image } from "astro:assets";
 
 // Email is Base64-encoded at build time and reassembled into a mailto:
 // link by client-side JS. This keeps the plain address out of the static
@@ -24,7 +25,7 @@ const links = [
           <h1>{homePage.name}<span class="hero-name-cn">{homePage.nameCn}</span></h1>
           <p class="hero-subtitle">{homePage.subtitle}</p>
         </div>
-        <img class="hero-avatar" src={author.avatar} alt={author.name} />
+        <Image class="hero-avatar" src={author.avatar} alt={author.name} width={456} widths={[192, 304, 456]} sizes="(max-width: 633px) 96px, (max-width: 1100px) calc(12vw + 20px), 152px" format="webp" quality={85} />
       </div>
       <p class="hero-links">
         {links.map((l, i) => (

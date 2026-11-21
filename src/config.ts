@@ -1,3 +1,5 @@
+import portrait from "./assets/suyang-ma.jpg";
+
 // ============================================
 // 扉页 — edit this file first.
 // Owner identity is confirmed; academic records remain explicit layout placeholders.
@@ -18,8 +20,8 @@ export const site = {
 
 export const author = {
   name: "Suyang Ma (马苏洋)",
-  /** Initials placeholder; replace with the owner-provided portrait. */
-  avatar: "/images/profile-placeholder.svg",
+  /** Owner-provided portrait; identifying metadata removed before import. */
+  avatar: portrait,
   bio: "Computer Science Student",
   location: "",
   email: "",

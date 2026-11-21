@@ -15,7 +15,7 @@ const pageTitle = title ? `${title} — ${site.title}` : `${site.title} — Home
 const pageDescription = description || site.description;
 
 const currentPath = Astro.url.pathname;
-const socialImage = new URL(ogImage || author.avatar, site.url).href;
+const socialImage = new URL(ogImage || author.avatar.src, site.url).href;
 const twitterHandle = author.x ? `@${author.x}` : undefined;
 ---
 

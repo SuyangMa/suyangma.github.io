@@ -353,6 +353,7 @@ p {
   width: clamp(96px, calc(12vw + 20px), 152px);
   height: clamp(96px, calc(12vw + 20px), 152px);
   object-fit: cover;
+  object-position: 50% 20%;
   flex-shrink: 0;
   border: 1px solid var(--color-border);
   border-radius: 8px;
