@@ -89,3 +89,10 @@
 - Removed the English and Chinese parenthetical acceptance notes after the KDD title.
 - Updated the CCF A label with a warm ivory gradient, fine border, inset highlight and subtle shadow, as requested.
 - Previous production commit: 37153fb73e6767aca08d78dc20b0742782663566.
+
+## 2026-11-22: External links open in new tabs
+
+- Added shared build-time external-link attributes to profile, footer, News, publication and project links, as well as Markdown body links.
+- External HTTP(S) destinations use target=_blank and rel=noopener noreferrer. Same-origin URLs, language switches, section anchors, email and other non-web schemes retain their navigation behavior.
+- Uses native links and works without JavaScript; Weave remains unlinked until formal publication.
+- Previous production commit: 33cacdb549874a97ff3056a02f536df30bbb1749.

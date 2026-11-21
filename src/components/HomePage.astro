@@ -6,6 +6,7 @@ import CitationCount from "../components/CitationCount.astro";
 
 import { author, homePage } from "../config";
 import { mdInline } from "../utils/content";
+import { externalLinkAttrs } from "../utils/links";
 
 import { getUi, getContent, type Locale } from "../i18n";
 
@@ -85,7 +86,7 @@ const pubSections = (publications.sections as PubSection[]);
               <div class="row-body">
                 <div class="row-title">
                   {item.text}
-                  {item.link && <a href={item.link}>{item.linkText ?? item.link}</a>}
+                  {item.link && <a href={item.link} {...externalLinkAttrs(item.link)}>{item.linkText ?? item.link}</a>}
                   {item.suffix && <>{item.suffix}</>}
                 </div>
                 {item.detail && <div class="row-sub">{item.detail}</div>}
@@ -133,7 +134,7 @@ const pubSections = (publications.sections as PubSection[]);
                 <div class="row-body">
                   <div class="row-title">
                     {href ? (
-                      <a href={href}>{paper.title}</a>
+                      <a href={href} {...externalLinkAttrs(href)}>{paper.title}</a>
                     ) : (
                       paper.title
                     )}
@@ -185,7 +186,7 @@ const pubSections = (publications.sections as PubSection[]);
             <div class="row-body">
               <div class="row-title">
                 {item.link ? (
-                  <a href={item.link}>{item.title}</a>
+                  <a href={item.link} {...externalLinkAttrs(item.link)}>{item.title}</a>
                 ) : (
                   item.title
                 )}
