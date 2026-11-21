@@ -1,6 +1,10 @@
 ---
 import { author, homePage } from "../config";
 import { Image } from "astro:assets";
+import { getUi, type Locale } from "../i18n";
+export interface Props { locale?: Locale; }
+const { locale = "en" } = Astro.props;
+const ui = getUi(locale);
 
 // Email is Base64-encoded at build time and reassembled into a mailto:
 // link by client-side JS. This keeps the plain address out of the static
@@ -10,7 +14,7 @@ const emailEncoded = author.email
   : "";
 
 const links = [
-  author.googleScholar && { href: author.googleScholar, label: "Google Scholar" },
+  author.googleScholar && { href: author.googleScholar, label: ui.scholar },
   author.github && { href: `https://github.com/${author.github}`, label: "GitHub" },
   author.x && { href: `https://x.com/${author.x}`, label: "X" },
   author.orcid && { href: author.orcid, label: "ORCID" },
@@ -23,8 +27,8 @@ const links = [
       <div class="hero-lockup">
         <Image class="hero-avatar" src={author.avatar} alt={author.name} width={960} widths={[320, 640, 960]} sizes="(max-width: 785px) 220px, (max-width: 1143px) 28vw, 320px" format="webp" quality={85} loading="eager" />
         <div class="hero-copy">
-          <h1>{homePage.name}<span class="hero-name-cn">{homePage.nameCn}</span></h1>
-          <p class="hero-subtitle">{homePage.subtitle}</p>
+          <h1>{locale === "en" ? homePage.name : homePage.nameCn}<span class="hero-name-cn">{locale === "en" ? homePage.nameCn : homePage.name}</span></h1>
+          <p class="hero-subtitle">{ui.subtitle ?? homePage.subtitle}</p>
           <p class="hero-links">
             {links.map((l, i) => (
               <>
@@ -35,7 +39,7 @@ const links = [
             {author.email && (
               <>
                 {links.length > 0 && <span class="hero-links-sep">·</span>}
-                <a class="email-link" href="#" data-email={emailEncoded}>Email</a>
+                <a class="email-link" href="#" data-email={emailEncoded}>{ui.email}</a>
               </>
             )}
           </p>

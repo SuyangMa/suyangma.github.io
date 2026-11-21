@@ -199,6 +199,27 @@ a:hover {
 .site-header .content-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm) clamp(1rem, 2.5vw, 2rem);
+}
+.header-navigation {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.language-switch {
+  flex: 0 0 auto;
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  min-width: 44px;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+.language-switch:hover {
+  color: var(--color-accent);
 }
 .site-nav {
   display: flex;
@@ -209,7 +230,7 @@ a:hover {
 }
 .site-nav a {
   font-family: var(--font-sans);
-  font-size: clamp(0.75rem, calc(0.3vw + 0.7rem), 0.875rem);
+  font-size: var(--text-sm);
   font-weight: 500;
   color: var(--color-text-secondary);
   text-decoration: none;

@@ -1,16 +1,19 @@
 ---
 import { googleScholar } from "../config";
+import { getUi, type Locale } from "../i18n";
 
 export interface Props {
   paperId: string;
+  locale?: Locale;
 }
-const { paperId } = Astro.props;
+const { paperId, locale = "en" } = Astro.props;
 ---
 
 {googleScholar.enabled && (
   <span
     class="badge badge-citation"
     data-paper-id={paperId}
+    data-citation-label={getUi(locale).citationLabel}
     data-stats-url={googleScholar.statsUrl}
   >
   </span>
@@ -30,7 +33,7 @@ const { paperId } = Astro.props;
             if (!id) return;
             const pubs = data.publications?.[id];
             if (pubs && pubs.num_citations > 0) {
-              el.textContent = `${pubs.num_citations} citations`;
+              el.textContent = `${pubs.num_citations} ${el.dataset.citationLabel ?? "citations"}`;
             }
           });
         })

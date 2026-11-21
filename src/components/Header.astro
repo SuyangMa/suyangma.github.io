@@ -1,22 +1,42 @@
 ---
 import { navigation } from "../config";
+import { getUi, type Locale } from "../i18n";
+export interface Props { locale?: Locale; }
+const { locale = "en" } = Astro.props;
+const ui = getUi(locale);
+const navLabels: Record<string, string> = ui.nav;
 ---
 
 <header class="site-header">
   <div class="content-container">
-    <nav>
+    <nav class="header-navigation" aria-label={ui.navigation}>
       <ul class="site-nav">
         {navigation.header.map((item) => (
           <li>
-            <a href={item.href}>{item.label}</a>
+            <a href={`${ui.path}${item.href.slice(item.href.indexOf("#"))}`}>{navLabels[item.href.split("#")[1]] ?? item.label}</a>
           </li>
         ))}
       </ul>
     </nav>
+    <a class="language-switch" href={ui.switchPath} lang={ui.switchLang}
+      hreflang={ui.switchLang} aria-label={ui.switchAria} data-language-switch>
+      {ui.switchLabel}
+    </a>
   </div>
 </header>
 
 <script>
+  // Language pages share section IDs; retain the current section when switching.
+  const languageSwitch = document.querySelector<HTMLAnchorElement>("[data-language-switch]");
+  function updateLanguageLink() {
+    if (!languageSwitch) return;
+    const target = new URL(languageSwitch.href);
+    target.hash = window.location.hash;
+    languageSwitch.href = target.href;
+  }
+  updateLanguageLink();
+  window.addEventListener("hashchange", updateLanguageLink);
+
   const links = [...document.querySelectorAll<HTMLAnchorElement>(".site-nav a")];
   const items = links.flatMap((link) => {
     const id = link.hash.slice(1);

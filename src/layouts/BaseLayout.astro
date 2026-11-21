@@ -3,16 +3,19 @@ import "../styles/global.css";
 import { site, author } from "../config";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { getUi, type Locale } from "../i18n";
 
 export interface Props {
+  locale?: Locale;
   title?: string;
   description?: string;
   ogImage?: string;
 }
 
-const { title, description, ogImage } = Astro.props;
-const pageTitle = title ? `${title} — ${site.title}` : `${site.title} — Homepage`;
-const pageDescription = description || site.description;
+const { title, description, ogImage, locale = "en" } = Astro.props;
+const ui = getUi(locale);
+const pageTitle = title ? `${title} — ${site.title}` : `${site.title} — ${ui.homeTitle}`;
+const pageDescription = description || ui.description || site.description;
 
 const currentPath = Astro.url.pathname;
 const socialImage = new URL(ogImage || author.avatar.src, site.url).href;
@@ -20,7 +23,7 @@ const twitterHandle = author.x ? `@${author.x}` : undefined;
 ---
 
 <!doctype html>
-<html lang={site.lang}>
+<html lang={ui.htmlLang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,6 +39,9 @@ const twitterHandle = author.x ? `@${author.x}` : undefined;
     <title>{pageTitle}</title>
 
     <link rel="canonical" href={new URL(currentPath, site.url).href} />
+    <link rel="alternate" hreflang="en" href={new URL("/", site.url).href} />
+    <link rel="alternate" hreflang="zh-CN" href={new URL("/zh-cn/", site.url).href} />
+    <link rel="alternate" hreflang="x-default" href={new URL("/", site.url).href} />
 
     <!-- Open Graph -->
     <meta property="og:title" content={pageTitle} />
@@ -43,6 +49,8 @@ const twitterHandle = author.x ? `@${author.x}` : undefined;
     <meta property="og:url" content={new URL(currentPath, site.url).href} />
     <meta property="og:site_name" content={site.title} />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content={locale === "en" ? "en_US" : "zh_CN"} />
+    <meta property="og:locale:alternate" content={locale === "en" ? "zh_CN" : "en_US"} />
     <meta property="og:image" content={socialImage} />
 
     <!-- Twitter / X card -->
@@ -73,9 +81,9 @@ const twitterHandle = author.x ? `@${author.x}` : undefined;
     )}
   </head>
   <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link">{ui.skip}</a>
 
-    <Header />
+    <Header locale={locale} />
 
     <main id="main-content">
       <slot />

@@ -30,3 +30,12 @@
 - Added a root favicon.ico fallback and versioned icon URLs to refresh cached template icons.
 - scripts/generate-favicons.mjs reproduces all icon sizes from the unchanged sanitized portrait source using the existing Sharp dependency.
 - Previous production state: b32a0720eb5ddf378a044d9cccb47a1cf92fda95. Revert this icon commit to restore it.
+
+## 2026-11-21: English and Chinese pages
+
+- Added an independent Simplified Chinese route at /zh-cn/ and a header language switch, following the referenced site's English/Chinese page pattern.
+- Root URL stays English without automatic language detection or preference redirects. Switching preserves the current section hash when JavaScript is available.
+- Translated navigation, profile identity, section headings, placeholder records, accessibility labels and page metadata. Updated the English introduction to the confirmed doctoral-student identity.
+- Shared the page component between languages; existing portrait framing and favicon assets are unchanged.
+- Added reciprocal alternate-language links and language-specific document metadata.
+- Maintenance instructions: docs/BILINGUAL.md. Previous production commit: b8ec22a2aef7a2471bd5592c6f4eba234b061dcc.
