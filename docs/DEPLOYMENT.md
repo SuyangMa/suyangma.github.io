@@ -30,4 +30,6 @@ This is the owner-approved baseline with confirmed name and GitHub link, an init
 
 ## Local release checks
 
-Build passed. Every src/public file and every generated dist file is byte-identical to the approved local baseline. Original repository files were retained except the intentional package.json and .gitignore updates; no source files were deleted. Remote push and Pages configuration await authenticated GitHub access.
+Build passed. Every src/public file and every generated dist file is byte-identical to the approved local baseline. Original repository files were retained except the intentional package.json and .gitignore updates; no source files were deleted. Authenticated access verified as SuyangMa with ADMIN permission. Original Pages setting: legacy, master, /, no custom domain, HTTPS enforced. Exact previous setting is recorded in deployment-before-20261121.json.
+
+Restore Pages publishing with build_type=legacy and source branch=master/path=/ after restoring the old source if a rollback is required. Preserve HTTPS enforcement.

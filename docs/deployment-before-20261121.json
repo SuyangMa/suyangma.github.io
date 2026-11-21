@@ -1,0 +1,13 @@
+{
+  "html_url": "https://suyangma.github.io/",
+  "build_type": "legacy",
+  "source": {
+    "branch": "master",
+    "path": "/"
+  },
+  "cname": null,
+  "https_enforced": true,
+  "public": true,
+  "previous_commit": "e532b229ec9f6c44b8d04ced9a1f4982d464f69b",
+  "backup_tag": "pre-feiye-20261121"
+}
