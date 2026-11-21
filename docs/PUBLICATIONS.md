@@ -21,7 +21,7 @@
 - Authors: Suyang Ma, Yanling Xu, Haoyang Li, Minyang Hu, Xiongwei Han, Xiaofei Liao, Hai Jin, Qinbin Li. Only the owner's name is emphasized; affiliation footnote asterisks are not interpreted as equal-contribution marks.
 - Venue/year: KDD 2027, supported by the supplied acceptance screenshot and the manuscript, despite the local filename containing KDD26.
 - Acceptance announcement date: 2026-11-14, from the supplied decision-email timestamp. The email contains an older title; use the newer PDF title as the owner instructed.
-- Both languages retain the original English title and author names. The accepted status and News sentence are localized.
+- Both languages retain the original English title and author names. Acceptance is announced in localized News; the title has no parenthetical acceptance label.
 - Owner instruction: no paper, PDF, DOI, OpenReview, code or related links for this entry until the camera-ready process is complete and the paper is formally published. The PDF's placeholder DOI, ISBN and page count are not published.
 - Do not upload the local manuscript, email screenshot, submission ID, author emails or review information. Only the requested title, author list, venue, status and announcement are included in site data.
 - Keep the existing SSI record and its published DOI link unchanged.
@@ -33,3 +33,9 @@
 - Venue and year use normal inline text flow rather than the generic flex subtitle layout. The venue's final word, comma, year and optional CCF badge stay together to prevent an isolated year; longer venue names can still wrap on compact screens.
 - The Chinese biography uses the owner-confirmed advisor name Zhang Yu in Chinese; the English biography keeps Professor Yu Zhang.
 - Weave still has no links or uploaded manuscript.
+
+## Badge styling update (2026-11-22)
+
+- Removed the parenthetical accepted note from the Weave title in both languages at the owner's request. Acceptance date and News remain intact.
+- CCF badges use a subtle warm ivory gradient, fine border, top inset highlight and small bottom shadows to match the page palette and the owner's raised-label reference.
+- Author underlining, nonbreaking venue/year grouping and the restriction on Weave links are preserved.

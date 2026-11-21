@@ -83,3 +83,9 @@
 - Replaced the flex venue/year row with inline flow and a nonbreaking final word/year/badge group to prevent the year from wrapping alone.
 - Preserved the restriction on Weave links and manuscript publication.
 - Previous production commit: b6de01af45841761daad57e71e22b9f507050fcd.
+
+## 2026-11-22: Subtle raised CCF badge
+
+- Removed the English and Chinese parenthetical acceptance notes after the KDD title.
+- Updated the CCF A label with a warm ivory gradient, fine border, inset highlight and subtle shadow, as requested.
+- Previous production commit: 37153fb73e6767aca08d78dc20b0742782663566.
