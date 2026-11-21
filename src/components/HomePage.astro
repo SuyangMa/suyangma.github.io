@@ -53,6 +53,7 @@ type Paper = {
   link?: string;
   authors: string;
   journal?: string;
+  conference?: string;
   year?: number;
   note?: string;
 };
@@ -137,9 +138,9 @@ const pubSections = (publications.sections as PubSection[]);
                     {paper.paperId && <CitationCount paperId={paper.paperId} locale={locale} />}
                     <span set:html={mdInline(paper.authors)} />
                   </div>
-                  {paper.journal && (
+                  {(paper.journal || paper.conference) && (
                     <div class="row-sub publication-journal">
-                      <strong><em>{paper.journal}</em></strong>{paper.year && <>, {paper.year}</>}
+                      <strong><em>{paper.journal ?? paper.conference}</em></strong>{paper.year && <>, {paper.year}</>}
                     </div>
                   )}
                 </div>

@@ -14,3 +14,14 @@
 - Existing publication and homepage-preparation News placeholders were replaced with this real paper and acceptance announcement.
 - No paper PDF is copied into public assets. Titles and News link to the DOI landing page.
 - Both languages keep the owner's name bold and display journal/year on a separate line, following the reference example.
+
+## Weave - KDD 2027 (accepted)
+
+- Title and full author order verified from the owner-supplied local PDF's first page and ACM reference block: Weave: A Workflow Management System for Self-Improving LLM Agents.
+- Authors: Suyang Ma, Yanling Xu, Haoyang Li, Minyang Hu, Xiongwei Han, Xiaofei Liao, Hai Jin, Qinbin Li. Only the owner's name is emphasized; affiliation footnote asterisks are not interpreted as equal-contribution marks.
+- Venue/year: KDD 2027, supported by the supplied acceptance screenshot and the manuscript, despite the local filename containing KDD26.
+- Acceptance announcement date: 2026-11-14, from the supplied decision-email timestamp. The email contains an older title; use the newer PDF title as the owner instructed.
+- Both languages retain the original English title and author names. The accepted status and News sentence are localized.
+- Owner instruction: no paper, PDF, DOI, OpenReview, code or related links for this entry until the camera-ready process is complete and the paper is formally published. The PDF's placeholder DOI, ISBN and page count are not published.
+- Do not upload the local manuscript, email screenshot, submission ID, author emails or review information. Only the requested title, author list, venue, status and announcement are included in site data.
+- Keep the existing SSI record and its published DOI link unchanged.

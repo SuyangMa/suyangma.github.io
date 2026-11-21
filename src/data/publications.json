@@ -1,6 +1,20 @@
 {
   "sections": [
     {
+      "heading": "2027",
+      "papers": [
+        {
+          "title": "Weave: A Workflow Management System for Self-Improving LLM Agents",
+          "venue": "[KDD 2027]",
+          "authors": "**Suyang Ma**, Yanling Xu, Haoyang Li, Minyang Hu, Xiongwei Han, Xiaofei Liao, Hai Jin, Qinbin Li",
+          "conference": "Proceedings of the 33rd ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+          "year": 2027,
+          "acceptedDate": "2026-11-14",
+          "note": "(accepted)"
+        }
+      ]
+    },
+    {
       "heading": "2026",
       "papers": [
         {

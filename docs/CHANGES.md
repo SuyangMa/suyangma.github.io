@@ -66,3 +66,11 @@
 - Highlighted the owner's name and retained full author order. Journal name is bold italic on its own line; unknown volume/issue/pages remain omitted.
 - Metadata evidence and maintenance notes: docs/PUBLICATIONS.md.
 - Previous production commit: 97f4817c28846f1d6a3e415bf71d56e2cc0a1aa8.
+
+## 2026-11-22: Weave accepted at KDD 2027
+
+- Added the updated Weave title and all eight authors in the supplied PDF order, with the owner's name bold.
+- Added a 2027 publication group, accepted status and the 2026.11.14 acceptance News in both languages.
+- Per owner instruction, the new paper and News have no links, and no manuscript or acceptance-email assets are uploaded.
+- Added optional conference-name rendering alongside the existing journal field. Existing SSI metadata and link are preserved.
+- Previous production commit: da252435b404a8bd143d75e250f7cf27bca6953a.
