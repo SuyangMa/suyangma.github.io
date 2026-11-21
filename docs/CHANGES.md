@@ -17,3 +17,9 @@
 - Placed the photo to the left of the profile and links, with natural wrapping on compact screens.
 - Responsive WebP sources now use 320, 640 and 960px widths.
 - Previous production state: 5aad405f0b5ebc8f96ab9522c0f24204e308717b. Revert this layout commit to restore it; no Pages settings changes are needed.
+
+## 2026-11-21: Confirmed academic identity
+
+- Updated the homepage subtitle and author bio to the owner-confirmed "Ph.D. Student @ HUST".
+- Updated the page description to use the same identity.
+- Previous production state: 1e2aa804663af436788b2c0a1e24e59677d7f12e. Revert this identity commit to restore it.

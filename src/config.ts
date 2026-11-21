@@ -7,7 +7,7 @@ import portrait from "./assets/suyang-ma.jpg";
 
 export const site = {
   title: "Suyang Ma",
-  description: "Suyang Ma - computer science student. Academic homepage preview; profile details are being prepared.",
+  description: "Suyang Ma - Ph.D. Student @ HUST. Academic homepage preview; profile details are being prepared.",
   preview: true,
   /** Your GitHub Pages URL, with no trailing slash. Must not contain "yourname". */
   url: "https://suyangma.github.io",
@@ -22,7 +22,7 @@ export const author = {
   name: "Suyang Ma (马苏洋)",
   /** Owner-provided portrait; identifying metadata removed before import. */
   avatar: portrait,
-  bio: "Computer Science Student",
+  bio: "Ph.D. Student @ HUST",
   location: "",
   email: "",
   /** Confirmed GitHub username. */
@@ -47,7 +47,7 @@ export const navigation = {
 export const homePage = {
   name: "Suyang Ma",
   nameCn: "马苏洋",
-  subtitle: "Computer Science Student",
+  subtitle: "Ph.D. Student @ HUST",
   /** Toggle sections on/off. Set false to hide a section entirely. */
   sections: {
     aboutMe: true,
