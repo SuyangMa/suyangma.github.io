@@ -1,3 +1,1 @@
-I am a **Ph.D. student at HUST**. This homepage will bring together my research interests, projects, and academic experience.
-
-**Preview.** Profile details are awaiting confirmation. The entries below are layout placeholders, not academic claims.
+I am a Ph.D. student at Huazhong University of Science and Technology (HUST), advised by Professor Yu Zhang. I received my B.Eng. degree from CUMT. My research interests lie in high-performance systems for large language model (LLM) agents.

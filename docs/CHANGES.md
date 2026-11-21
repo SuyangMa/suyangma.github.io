@@ -46,3 +46,9 @@
 - Preserved native links, keyboard focus styling and section hashes on both options.
 - Allowed the header to wrap naturally so controls remain visible on narrow screens.
 - Previous production commit: 8d9d8f80b6a0fd48b6fc0445154757fa3921564e.
+
+## 2026-11-21: Approved bilingual biography
+
+- Replaced the introductory paragraphs in both languages with the owner's approved biography: doctoral student at HUST advised by Professor Yu Zhang, B.Eng. from CUMT, and research interests in high-performance systems for LLM agents.
+- Removed the Preview notice from the introduction. Other placeholder records and the existing indexing setting are unchanged.
+- Previous production commit: fdb3d259e325a9d721e9f58f1c78f2d07a343994. Revert this biography commit to restore it.
