@@ -56,6 +56,7 @@ type Paper = {
   conference?: string;
   year?: number;
   note?: string;
+  ccf?: "A" | "B" | "C";
 };
 type PubSection = { heading: string; papers: Paper[] };
 const pubSections = (publications.sections as PubSection[]);
@@ -122,6 +123,10 @@ const pubSections = (publications.sections as PubSection[]);
             <p class="cv-subheading">{section.heading}</p>
             {section.papers.map((paper) => {
               const href = paper.link ?? (paper.paperId ? scholarUrl(paper.paperId) : null);
+              const publicationName = paper.journal ?? paper.conference ?? "";
+              const splitAt = publicationName.lastIndexOf(" ");
+              const publicationLead = splitAt > 0 ? publicationName.slice(0, splitAt + 1) : "";
+              const publicationTail = splitAt > 0 ? publicationName.slice(splitAt + 1) : publicationName;
               return (
               <div class="row">
                 <span class="row-label">{paper.venue}</span>
@@ -136,11 +141,11 @@ const pubSections = (publications.sections as PubSection[]);
                   </div>
                   <div class="row-sub">
                     {paper.paperId && <CitationCount paperId={paper.paperId} locale={locale} />}
-                    <span set:html={mdInline(paper.authors)} />
+                    <span class="publication-authors" set:html={mdInline(paper.authors)} />
                   </div>
                   {(paper.journal || paper.conference) && (
                     <div class="row-sub publication-journal">
-                      <strong><em>{paper.journal ?? paper.conference}</em></strong>{paper.year && <>, {paper.year}</>}
+                      <strong><em>{publicationLead}</em></strong><span class="publication-tail"><strong><em>{publicationTail}</em></strong>{paper.year && `, ${paper.year}`}{paper.ccf && <span class="badge-ccf">CCF {paper.ccf}</span>}</span>
                     </div>
                   )}
                 </div>

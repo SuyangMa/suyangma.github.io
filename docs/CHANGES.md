@@ -74,3 +74,12 @@
 - Per owner instruction, the new paper and News have no links, and no manuscript or acceptance-email assets are uploaded.
 - Added optional conference-name rendering alongside the existing journal field. Existing SSI metadata and link are preserved.
 - Previous production commit: da252435b404a8bd143d75e250f7cf27bca6953a.
+
+## 2026-11-22: Author emphasis, CCF badge and venue/year layout
+
+- Changed the Chinese advisor name to the owner-confirmed Chinese spelling.
+- Added underlines to the existing bold owner names in both publication lists.
+- Added a small CCF A badge to KDD in both languages, leaving SSI unlabelled.
+- Replaced the flex venue/year row with inline flow and a nonbreaking final word/year/badge group to prevent the year from wrapping alone.
+- Preserved the restriction on Weave links and manuscript publication.
+- Previous production commit: b6de01af45841761daad57e71e22b9f507050fcd.

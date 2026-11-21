@@ -25,3 +25,11 @@
 - Owner instruction: no paper, PDF, DOI, OpenReview, code or related links for this entry until the camera-ready process is complete and the paper is formally published. The PDF's placeholder DOI, ISBN and page count are not published.
 - Do not upload the local manuscript, email screenshot, submission ID, author emails or review information. Only the requested title, author list, venue, status and announcement are included in site data.
 - Keep the existing SSI record and its published DOI link unchanged.
+
+## Display conventions (2026-11-22)
+
+- Owner names marked with Markdown bold in publication author lists are also underlined by the publication-authors rule, in both languages.
+- Weave has a CCF A badge. Verified against CCF's database/data-mining/content-retrieval conference list: https://www.ccf.org.cn/Academic_Evaluation/DM_CS/. SSI is not assigned that international-conference label.
+- Venue and year use normal inline text flow rather than the generic flex subtitle layout. The venue's final word, comma, year and optional CCF badge stay together to prevent an isolated year; longer venue names can still wrap on compact screens.
+- The Chinese biography uses the owner-confirmed advisor name Zhang Yu in Chinese; the English biography keeps Professor Yu Zhang.
+- Weave still has no links or uploaded manuscript.
