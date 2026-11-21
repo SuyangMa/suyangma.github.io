@@ -14,7 +14,7 @@ export interface Props {
 
 const { title, description, ogImage, locale = "en" } = Astro.props;
 const ui = getUi(locale);
-const pageTitle = title ? `${title} — ${site.title}` : `${site.title} — ${ui.homeTitle}`;
+const pageTitle = title ? `${title} — ${site.title}` : site.tabTitle;
 const pageDescription = description || ui.description || site.description;
 
 const currentPath = Astro.url.pathname;

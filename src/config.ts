@@ -7,6 +7,7 @@ import portrait from "./assets/suyang-ma.jpg";
 
 export const site = {
   title: "Suyang Ma",
+  tabTitle: "Suyang Ma（马苏洋） — Homepage",
   description: "Suyang Ma - Ph.D. Student @ HUST. Academic homepage preview; profile details are being prepared.",
   preview: true,
   /** Your GitHub Pages URL, with no trailing slash. Must not contain "yourname". */
