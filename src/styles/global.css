@@ -414,7 +414,7 @@ p {
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-serif);
-  font-size: clamp(1.5rem, calc(0.8vw + 1.3rem), 2rem);
+  font-size: clamp(1.375rem, calc(0.35vw + 1.25rem), 1.625rem);
   font-weight: 700;
   color: var(--color-text);
   letter-spacing: -0.02em;
@@ -472,6 +472,9 @@ body strong {
 .row-list {
   list-style: none;
 }
+.news-item {
+  padding: 0.4rem 0;
+}
 
 .row {
   display: flex;
@@ -493,6 +496,8 @@ body strong {
 }
 #news .row-label,
 #publications .row-label {
+  width: auto;
+  margin-inline-end: 0.35em;
   font-size: var(--text-base);
   font-weight: 700;
   color: var(--color-accent-hover);

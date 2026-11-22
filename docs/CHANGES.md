@@ -113,3 +113,11 @@
 - News dates and publication venue labels now use 16px bold dark accent text. Other metadata is at least 14px with stronger contrast, and the existing CCF badge has a semibold label.
 - Preserved bilingual text, section IDs, link behavior, SEO descriptions and unpublished-paper restrictions.
 - Previous production commit: 5650e7a7656c51bc20b8cf1afdfae31a24d3d38a.
+
+## 2026-11-22: Compact section headings and inline entry labels
+
+- Reduced section headings from 24-32px to the owner-approved 22-26px preview, preserving bold weight and decorative icons.
+- News dates now flow inline with their text, with a colon separator and a small typographic gap instead of a fixed-width metadata column.
+- Publication venue labels now appear inline at the start of each title; author and venue details use the full entry width.
+- Applied the layout consistently to both languages and all news/publication entries, preserving dates, authors, links, CCF badges, year wrapping and SEO settings.
+- Previous production commit: 912b069995ae2a6b4e5830ed8aa8817d1b1266bb.

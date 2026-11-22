@@ -81,16 +81,14 @@ const pubSections = (publications.sections as PubSection[]);
       <Section title={ui.sections.news} id="news">
         <ul class="row-list reveal-stagger">
           {newsItems.map((item) => (
-            <li class="row">
-              <span class="row-label">{item.date}</span>
-              <div class="row-body">
-                <div class="row-title">
-                  {item.text}
-                  {item.link && <a href={item.link} {...externalLinkAttrs(item.link)}>{item.linkText ?? item.link}</a>}
-                  {item.suffix && <>{item.suffix}</>}
-                </div>
-                {item.detail && <div class="row-sub">{item.detail}</div>}
-              </div>
+            <li class="news-item">
+              <span class="row-label">{item.date}:</span>{" "}
+              <span class="row-title">
+                {item.text}
+                {item.link && <a href={item.link} {...externalLinkAttrs(item.link)}>{item.linkText ?? item.link}</a>}
+                {item.suffix && <>{item.suffix}</>}
+              </span>
+              {item.detail && <div class="row-sub">{item.detail}</div>}
             </li>
           ))}
         </ul>
@@ -130,9 +128,9 @@ const pubSections = (publications.sections as PubSection[]);
               const publicationTail = splitAt > 0 ? publicationName.slice(splitAt + 1) : publicationName;
               return (
               <div class="row">
-                <span class="row-label">{paper.venue}</span>
                 <div class="row-body">
                   <div class="row-title">
+                    <span class="row-label">{paper.venue}</span>{" "}
                     {href ? (
                       <a href={href} {...externalLinkAttrs(href)}>{paper.title}</a>
                     ) : (
