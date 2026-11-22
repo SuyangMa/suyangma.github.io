@@ -25,7 +25,7 @@ export const author = {
   avatar: portrait,
   bio: "Ph.D. Student @ HUST",
   location: "",
-  email: "suyangma609@hust.edu.cn",
+  email: "suyangma@hust.edu.cn",
   /** Confirmed GitHub username. */
   github: "SuyangMa",
   x: "",
