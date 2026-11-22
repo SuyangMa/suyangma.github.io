@@ -40,7 +40,6 @@ export const navigation = {
     { label: "About", href: "/#about" },
     { label: "News", href: "/#news" },
     { label: "Publications", href: "/#publications" },
-    { label: "Honors", href: "/#honors" },
   ],
 };
 
@@ -56,7 +55,7 @@ export const homePage = {
     publications: true,
     education: false,
     projects: false,
-    honors: true,
+    honors: false,
     services: false,
     skills: false,
   },
