@@ -54,7 +54,7 @@ export const homePage = {
     news: true,
     experience: false,
     publications: true,
-    education: true,
+    education: false,
     projects: false,
     honors: true,
     services: false,
