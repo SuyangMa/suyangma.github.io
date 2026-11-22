@@ -127,3 +127,10 @@
 - Moved CCF badges from the conference/year line to the end of the publication title line in both languages.
 - Preserved badge appearance, conference/year wrapping, paper metadata and unpublished-paper link restrictions.
 - Previous production commit: a23e51105184897281e927b9b404d8b61c23a71b.
+
+## 2026-11-22: Bing description length and crawl discovery files
+
+- Shortened English search/social descriptions to 139 characters, preserving the existing Chinese description and visible page content.
+- Added an open robots.txt and a bilingual XML sitemap containing only the two canonical homepage routes.
+- Preserved Bing verification, existing indexing settings, language alternates and unpublished-paper restrictions.
+- Previous production commit: cc7b40581ab291747f382e154ce007e8cf83ab6f.

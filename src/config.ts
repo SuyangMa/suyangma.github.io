@@ -8,7 +8,7 @@ import portrait from "./assets/suyang-ma.jpg";
 export const site = {
   title: "Suyang Ma",
   tabTitle: "Suyang Ma（马苏洋） — Homepage",
-  description: "Suyang Ma (马苏洋) is a Ph.D. student at Huazhong University of Science and Technology (HUST), advised by Prof. Yu Zhang. His research focuses on high-performance systems for LLM agents.",
+  description: "Suyang Ma (马苏洋), Ph.D. student at HUST advised by Prof. Yu Zhang. Research: high-performance systems for large language model (LLM) agents.",
   preview: false,
   /** Your GitHub Pages URL, with no trailing slash. Must not contain "yourname". */
   url: "https://suyangma.github.io",

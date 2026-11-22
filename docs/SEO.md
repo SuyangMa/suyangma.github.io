@@ -15,3 +15,10 @@ Official references:
 - https://www.bing.com/webmasters/help/why-is-my-site-not-in-the-index-2141dfab
 - https://www.bing.com/indexnow/getstarted
 - https://www.indexnow.org/documentation
+
+## 2026-11-22: Bing live inspection follow-up
+
+- Bing's owner-provided English Live URL result allowed indexing but flagged description length. Shortened the English description from 183 to 139 characters while retaining both names, HUST, advisor and research focus. Chinese description remains unchanged because the owner's Chinese Index result showed successful indexing and no SEO/GEO issues.
+- Added public/robots.txt with open crawl access and the absolute sitemap URL.
+- Added a static public/sitemap.xml for the two canonical HTML pages, with reciprocal language alternates. No additional dependency is required for this two-page site. Update the sitemap when adding or removing public HTML routes; verification files and assets are excluded. Omitted lastmod rather than inventing modification dates.
+- The green Live URL result is indexing eligibility, not a guarantee of indexing or ranking. Retest the English page and submit the sitemap in Bing Webmaster Tools after deployment.
