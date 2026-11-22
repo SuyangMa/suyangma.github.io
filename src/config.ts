@@ -25,13 +25,13 @@ export const author = {
   avatar: portrait,
   bio: "Ph.D. Student @ HUST",
   location: "",
-  email: "",
+  email: "suyangma609@hust.edu.cn",
   /** Confirmed GitHub username. */
   github: "SuyangMa",
   x: "",
-  googleScholar: "",
+  googleScholar: "https://scholar.google.com/citations?user=LQTxVVoAAAAJ&hl=zh-CN",
   /** Scholar user id, the part before the colon in a paper id. */
-  googleScholarId: "",
+  googleScholarId: "LQTxVVoAAAAJ",
   orcid: "",
 };
 

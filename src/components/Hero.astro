@@ -3,20 +3,15 @@ import { author, homePage } from "../config";
 import { Image } from "astro:assets";
 import { externalLinkAttrs } from "../utils/links";
 import { getUi, type Locale } from "../i18n";
+import GitHubIcon from "./icons/GitHubIcon.astro";
+import ScholarIcon from "./icons/ScholarIcon.astro";
 export interface Props { locale?: Locale; }
 const { locale = "en" } = Astro.props;
 const ui = getUi(locale);
 
-// Email is Base64-encoded at build time and reassembled into a mailto:
-// link by client-side JS. This keeps the plain address out of the static
-// HTML, defeating the regex-based harvesters spambots rely on.
-const emailEncoded = author.email
-  ? btoa(author.email)
-  : "";
-
 const links = [
-  author.googleScholar && { href: author.googleScholar, label: ui.scholar },
   author.github && { href: `https://github.com/${author.github}`, label: "GitHub" },
+  author.googleScholar && { href: author.googleScholar, label: ui.scholar },
   author.x && { href: `https://x.com/${author.x}`, label: "X" },
   author.orcid && { href: author.orcid, label: "ORCID" },
 ].filter((l): l is { href: string; label: string } => Boolean(l));
@@ -31,34 +26,19 @@ const links = [
           <h1>{locale === "en" ? homePage.name : homePage.nameCn}<span class="hero-name-cn">{locale === "en" ? homePage.nameCn : homePage.name}</span></h1>
           <p class="hero-subtitle">{ui.subtitle ?? homePage.subtitle}</p>
           <p class="hero-links">
-            {links.map((l, i) => (
-              <>
-                {i > 0 && <span class="hero-links-sep">·</span>}
-                <a href={l.href} {...externalLinkAttrs(l.href)}>{l.label}</a>
-              </>
-            ))}
             {author.email && (
-              <>
-                {links.length > 0 && <span class="hero-links-sep">·</span>}
-                <a class="email-link" href="#" data-email={emailEncoded}>{ui.email}</a>
-              </>
+              <a class="email-link" href={`mailto:${author.email}`}>{author.email}</a>
             )}
+            {links.map((l) => (
+              <a href={l.href} {...externalLinkAttrs(l.href)}>
+                {l.label === "GitHub" && <GitHubIcon />}
+                {l.href === author.googleScholar && <ScholarIcon />}
+                <span>{l.label}</span>
+              </a>
+            ))}
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<script>
-  // Reassemble the mailto: link from the Base64 payload, then drop the
-  // data attribute so the decoded address never lingers in the DOM markup.
-  document
-    .querySelectorAll<HTMLAnchorElement>("a.email-link[data-email]")
-    .forEach((a) => {
-      const enc = a.dataset.email;
-      if (!enc) return;
-      a.href = "mailto:" + atob(enc);
-      a.removeAttribute("data-email");
-    });
-</script>

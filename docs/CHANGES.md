@@ -134,3 +134,11 @@
 - Added an open robots.txt and a bilingual XML sitemap containing only the two canonical homepage routes.
 - Preserved Bing verification, existing indexing settings, language alternates and unpublished-paper restrictions.
 - Previous production commit: cc7b40581ab291747f382e154ce007e8cf83ab6f.
+
+## 2026-11-22: Public email and Google Scholar contact links
+
+- Added the owner-provided public HUST email as visible text with a native mailto link, without requiring client-side email reconstruction.
+- Added the supplied Google Scholar profile and ID; automatic citation crawling remains disabled.
+- Header contacts now show email, GitHub and localized Google Scholar text in a warm dark accent, reusing existing icons and wrapping whole links naturally on small screens.
+- Preserved external new-tab behavior, profile image, academic content and SEO metadata.
+- Previous production commit: 441a5cb3c5b1a0a3d4f9f4f3fdf2e72afe4847ab.
