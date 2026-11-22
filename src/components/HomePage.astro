@@ -121,7 +121,7 @@ const pubSections = (publications.sections as PubSection[]);
       <Section title={ui.sections.publications} id="publications">
         {pubSections.map((section) => (
           <>
-            <p class="cv-subheading">{section.heading}</p>
+            <h3 class="cv-subheading">{section.heading}</h3>
             {section.papers.map((paper) => {
               const href = paper.link ?? (paper.paperId ? scholarUrl(paper.paperId) : null);
               const publicationName = paper.journal ?? paper.conference ?? "";
@@ -206,7 +206,7 @@ const pubSections = (publications.sections as PubSection[]);
         <div class="rows-compact">
           {honors.sections.map((section) => (
             <>
-              <p class="cv-subheading">{section.heading}</p>
+              <h3 class="cv-subheading">{section.heading}</h3>
               {section.items.map((item) => (
                 <div class="row">
                   <span class="row-label">{item.date}</span>
@@ -228,7 +228,7 @@ const pubSections = (publications.sections as PubSection[]);
         <div class="rows-compact">
           {services.sections.map((section) => (
             <>
-              <p class="cv-subheading">{section.heading}</p>
+              <h3 class="cv-subheading">{section.heading}</h3>
               {section.items.map((item) => (
                 <div class="row">
                   <span class="row-label">{item.role}</span>

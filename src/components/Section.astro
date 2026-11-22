@@ -4,11 +4,25 @@ export interface Props {
   id?: string;
 }
 const { title, id } = Astro.props;
+const icons: Record<string, string> = {
+  news: "🔥",
+  publications: "📝",
+  education: "🎓",
+  honors: "🏅",
+  experience: "💻",
+  projects: "🔬",
+  services: "🤝",
+  skills: "🛠️",
+};
+const icon = id ? icons[id] : undefined;
 ---
 
 <section class="section" {...(id ? { id } : {})}>
   <div class="content-container">
-    <h2 class="section-heading">{title}</h2>
+    <h2 class="section-heading">
+      {icon && <span class="section-icon" aria-hidden="true">{icon}</span>}
+      <span>{title}</span>
+    </h2>
     <div><slot /></div>
   </div>
 </section>

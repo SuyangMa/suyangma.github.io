@@ -410,14 +410,24 @@ p {
   scroll-margin-top: var(--space-xl);
 }
 .section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: var(--font-serif);
-  font-size: clamp(1.25rem, calc(0.5vw + 1.1rem), 1.5rem);
-  font-weight: 500;
+  font-size: clamp(1.5rem, calc(0.8vw + 1.3rem), 2rem);
+  font-weight: 700;
   color: var(--color-text);
   letter-spacing: -0.02em;
   border-top: 1px solid var(--color-border);
   padding-top: var(--space-md);
   margin-bottom: var(--space-md);
+}
+
+.section-icon {
+  flex: 0 0 auto;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 0.85em;
+  line-height: 1;
 }
 
 /* Collapse last element margin so section-to-section gap is uniform */
@@ -437,16 +447,15 @@ p {
 }
 
 /* Subsection labels (e.g. "Selected Publications") */
-.section p.cv-subheading {
+.section .cv-subheading {
   font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  font-weight: 500;
-  color: var(--color-text-muted);
-  margin: var(--space-md) 0 var(--space-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-accent-hover);
+  margin: 1.5rem 0 var(--space-sm);
+  letter-spacing: 0.02em;
 }
-.section p.cv-subheading:first-child {
+.section .cv-subheading:first-child {
   margin-top: 0;
 }
 
@@ -474,13 +483,20 @@ body strong {
 }
 .row-label {
   font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  font-weight: 400;
-  color: var(--color-text-muted);
-  letter-spacing: 0.04em;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.01em;
   flex: 0 0 8.5rem;
   width: 8.5rem;
   line-height: 1.7;
+}
+#news .row-label,
+#publications .row-label {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-accent-hover);
+  white-space: nowrap;
 }
 .row-body {
   flex: 1 1 20rem;
@@ -550,15 +566,16 @@ body strong {
   color: var(--color-text-secondary);
   font-family: var(--font-mono);
   font-size: var(--text-sm);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.4;
   vertical-align: baseline;
   white-space: nowrap;
 }
 .row-meta {
   font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
   letter-spacing: 0.04em;
   margin-left: var(--space-xs);
 }

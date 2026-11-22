@@ -104,3 +104,12 @@
 - Added the public IndexNow ownership file for submitting the two updated public page URLs after deployment.
 - Preserved the shared page title, localized visible biography, existing paper restrictions and all other body content.
 - Source verification and indexing notes: docs/SEO.md. Previous production commit: 59c5d210d0ea41725cbc96bd95bec1e5c246b65a.
+
+## 2026-11-22: Stronger visual hierarchy
+
+- Added decorative section icons following the referenced homepage: News, Publications, Education and Honors, with matching icons for optional sections.
+- Enlarged section headings to 24-32px and made them bold. Decorative icons are hidden from assistive technology.
+- Publication year groups now use semantic h3 headings at 20px, bold and dark warm accent color.
+- News dates and publication venue labels now use 16px bold dark accent text. Other metadata is at least 14px with stronger contrast, and the existing CCF badge has a semibold label.
+- Preserved bilingual text, section IDs, link behavior, SEO descriptions and unpublished-paper restrictions.
+- Previous production commit: 5650e7a7656c51bc20b8cf1afdfae31a24d3d38a.
