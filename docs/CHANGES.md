@@ -121,3 +121,9 @@
 - Publication venue labels now appear inline at the start of each title; author and venue details use the full entry width.
 - Applied the layout consistently to both languages and all news/publication entries, preserving dates, authors, links, CCF badges, year wrapping and SEO settings.
 - Previous production commit: 912b069995ae2a6b4e5830ed8aa8817d1b1266bb.
+
+## 2026-11-22: CCF badge beside publication title
+
+- Moved CCF badges from the conference/year line to the end of the publication title line in both languages.
+- Preserved badge appearance, conference/year wrapping, paper metadata and unpublished-paper link restrictions.
+- Previous production commit: a23e51105184897281e927b9b404d8b61c23a71b.

@@ -137,6 +137,7 @@ const pubSections = (publications.sections as PubSection[]);
                       paper.title
                     )}
                     {paper.note && <span class="publication-note"> {paper.note}</span>}
+                    {paper.ccf && <span class="badge-ccf">CCF {paper.ccf}</span>}
                   </div>
                   <div class="row-sub">
                     {paper.paperId && <CitationCount paperId={paper.paperId} locale={locale} />}
@@ -144,7 +145,7 @@ const pubSections = (publications.sections as PubSection[]);
                   </div>
                   {(paper.journal || paper.conference) && (
                     <div class="row-sub publication-journal">
-                      <strong><em>{publicationLead}</em></strong><span class="publication-tail"><strong><em>{publicationTail}</em></strong>{paper.year && `, ${paper.year}`}{paper.ccf && <span class="badge-ccf">CCF {paper.ccf}</span>}</span>
+                      <strong><em>{publicationLead}</em></strong><span class="publication-tail"><strong><em>{publicationTail}</em></strong>{paper.year && `, ${paper.year}`}</span>
                     </div>
                   )}
                 </div>
