@@ -52,6 +52,8 @@ type Paper = {
   paperId?: string;
   /** Direct link (e.g. arXiv); takes precedence over the Scholar link. */
   link?: string;
+  /** Site-hosted paper PDF, opened in a separate tab. */
+  pdf?: string;
   authors: string;
   journal?: string;
   conference?: string;
@@ -146,6 +148,14 @@ const pubSections = (publications.sections as PubSection[]);
                   {(paper.journal || paper.conference) && (
                     <div class="row-sub publication-journal">
                       <strong><em>{publicationLead}</em></strong><span class="publication-tail"><strong><em>{publicationTail}</em></strong>{paper.year && `, ${paper.year}`}</span>
+                      {paper.pdf && (
+                        <span class="publication-resource">
+                          <span aria-hidden="true">|</span>{" "}
+                          <a class="publication-pdf" href={paper.pdf} target="_blank" rel="noopener noreferrer"
+                            title={locale === "en" ? "Read PDF (accepted manuscript)" : "阅读 PDF（录用稿）"}
+                            aria-label={`${paper.title} (PDF)`}>[PDF]</a>
+                        </span>
+                      )}
                     </div>
                   )}
                 </div>

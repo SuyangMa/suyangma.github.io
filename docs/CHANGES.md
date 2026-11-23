@@ -142,3 +142,11 @@
 - Header contacts now show email, GitHub and localized Google Scholar text in a warm dark accent, reusing existing icons and wrapping whole links naturally on small screens.
 - Preserved external new-tab behavior, profile image, academic content and SEO metadata.
 - Previous production commit: 441a5cb3c5b1a0a3d4f9f4f3fdf2e72afe4847ab.
+
+## 2026-11-23: Site-hosted PDF for SSI paper
+
+- Added a warm-accent [PDF] resource link after the SSI journal/year line in both languages. The PDF opens in a new tab directly from /files/ssi-2026-0127.pdf on this site.
+- Stored the exact publisher-hosted, open-access accepted manuscript from https://www.sciengine.com/sci-open/api/v1/open/file/pdfView/C449E061912F4845966E62E881E1252D in public/files/ssi-2026-0127.pdf. Original Accepted/For Review Only cover and all 25 pages are preserved; this is not the final typeset version.
+- Identity checked against DOI 10.1360/SSI-2026-0127 and the six authors. SHA256: 0d331e488c2a8a014041741e96311c00929f8a7c8fc47aa29d7932c194f7eaad.
+- Retained the title's DOI destination and all existing publication metadata. Weave has no PDF or other added resource links.
+- Previous production commit: 5dfb9a4f4ba9d8ac14b65b7538935064e81c9dd2.

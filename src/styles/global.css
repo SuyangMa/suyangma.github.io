@@ -575,6 +575,22 @@ body strong {
 .publication-tail {
   white-space: nowrap;
 }
+.publication-resource {
+  display: inline-block;
+  margin-inline-start: 0.6em;
+  white-space: nowrap;
+}
+.publication-pdf {
+  color: var(--color-accent-hover);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+}
+.publication-pdf:hover {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+}
 .badge-ccf {
   display: inline-block;
   margin-inline-start: 0.4em;
